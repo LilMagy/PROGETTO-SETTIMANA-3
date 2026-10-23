@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js"></script> 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+    <title>Progetto-3</title>
+  </head>
+
+  <body>
+
+
+
+<form id="form-ricerca">
+  <input type="search" id="query" placeholder="Cerca un film…" required>
+  <button type="submit" id="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+</form>
+
+ <section id="ultimi-film" class="film-section">
+    <h2>Gli ultimi 10 film usciti</h2>
+    <p id="film-stato" class="film-stato">Caricamento…</p>
+    <div id="film-griglia" class="film-griglia"></div>
+    <p class="film-credits">
+      Dati forniti da TMDB. Questo prodotto usa l'API di TMDB ma non è approvato né certificato da TMDB.
+    </p>
+  </section>
+
+  <!-- ============ SEZIONE 2: la mia lista ============ -->
+  <section id="la-mia-lista" class="film-section lista-section">
+    <h2>La mia lista <span id="lista-contatore" class="lista-contatore">0</span></h2>
+    <p id="lista-vuota" class="film-stato">La lista è vuota: usa il pulsante su una card per aggiungere un film.</p>
+    <ul id="lista-film" class="lista-film"></ul>
+  </section>
+
+  </body>
+</html>

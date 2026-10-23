@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+form {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  margin-left: 10px;
+
+}
+
+#search {
+  position: absolute;
+  left: 60%;
+}
+
+#query {
+  position: absolute;
+  width: 20%;
+  left: 40%;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f5f7;
+  color: #1b2845;
+}
+
+/* ===== SEZIONE FILM ===== */
+.film-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 40px;
+}
+
+.film-section h2 {
+  margin: 0 0 20px;
+  font-size: 26px;
+}
+
+.film-stato {
+  margin: 0 0 16px;
+  color: #5b6478;
+}
+
+.film-stato.errore {
+  color: #b3261e;
+  font-weight: 700;
+}
+
+.film-griglia {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 20px;
+}
+
+.film-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  color: inherit;
+  text-decoration: none;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+
+.film-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+.film-poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  background: #dde1e8;
+}
+
+.film-poster--vuoto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  text-align: center;
+  font-weight: 700;
+  color: #5b6478;
+}
+
+.film-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
+}
+
+.film-titolo {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.film-data {
+  font-size: 13px;
+  color: #5b6478;
+}
+
+.film-voto {
+  align-self: flex-start;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #1b2845;
+  color: #fff;
+  font-size: 12px;
+}
+
+.film-credits {
+  margin: 24px 0 0;
+  font-size: 12px;
+  color: #5b6478;
+}
+
+.lista-data {
+    color: #5b6478;
+    margin-left: 5px;
+}
+
+.lista-elimina {
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+.lista-elimina:hover {
+    color: #b3261e;
+}
