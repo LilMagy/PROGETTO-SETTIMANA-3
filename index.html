@@ -1,43 +1,100 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week Project — Settimana III</title>
     <link rel="stylesheet" href="style.css" />
-    <script type="module" src="script.js"></script> 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
       integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"/>
-    <title>Progetto-3</title>
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body>
+    <header>
+      <h1>La mia watchlist</h1>
+      <h2>Cerca un film su TMDB e aggiungilo alla lista</h2>
+      <button id="tema" type="button">Tema</button>
+      <!-- Titolo dell'app + sottotitolo + button tema chiaro/scuro -->
+    </header>
 
+    <main>
+      <section class="form">
+        <form id="form-ricerca">
+          <input
+            type="search"
+            id="query"
+            placeholder="Cerca un film…"
+            aria-label="Cerca un film"
+            required
+          />
+          <button type="submit" id="search" aria-label="Cerca">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+        <!-- Risultati della ricerca: ricostruiti da render() -->
+        <ul id="risultati" class="risultati"></ul>
+      </section>
 
+      <section class="controlli">
+        <!-- Ricerca live, filtro (select), ordinamento -->
+        <input
+          type="search"
+          id="filtro-testo"
+          placeholder="Filtra la lista…"
+          aria-label="Filtra la lista per titolo"
+        />
+        <select id="filtro-stato" aria-label="Filtra per stato">
+          <option value="tutti">Tutti</option>
+          <option value="da-vedere">Da vedere</option>
+          <option value="visti">Visti</option>
+        </select>
+        <select id="ordine" aria-label="Ordina per">
+          <option value="recenti">Aggiunti di recente</option>
+          <option value="titolo">Titolo (A-Z)</option>
+          <option value="anno">Anno (più recenti)</option>
+          <option value="voto">Voto (più alti)</option>
+        </select>
+      </section>
 
-<form id="form-ricerca">
-  <input type="search" id="query" placeholder="Cerca un film…" required>
-  <button type="submit" id="search"><i class="fa-solid fa-magnifying-glass"></i></button>
-</form>
+      <section class="statistiche">
+        <!-- Conteggi e/o barre orizzontali -->
+        <div class="stat">
+          <span>Totale</span>
+          <strong id="stat-totale">0</strong>
+        </div>
+        <div class="stat">
+          <span>Visti</span>
+          <strong id="stat-visti">0</strong>
+          <div class="barra"><div id="barra-visti" class="visti"></div></div>
+        </div>
+        <div class="stat">
+          <span>Da vedere</span>
+          <strong id="stat-da-vedere">0</strong>
+          <div class="barra"><div id="barra-da-vedere"></div></div>
+        </div>
+      </section>
 
- <section id="ultimi-film" class="film-section">
-    <h2>Gli ultimi 10 film usciti</h2>
-    <p id="film-stato" class="film-stato">Caricamento…</p>
-    <div id="film-griglia" class="film-griglia"></div>
-    <p class="film-credits">
-      Dati forniti da TMDB. Questo prodotto usa l'API di TMDB ma non è approvato né certificato da TMDB.
-    </p>
-  </section>
+      <section class="lista">
+        <!-- Container che render() ricostruisce a ogni cambio di stato -->
+      </section>
 
-  <!-- ============ SEZIONE 2: la mia lista ============ -->
-  <section id="la-mia-lista" class="film-section lista-section">
-    <h2>La mia lista <span id="lista-contatore" class="lista-contatore">0</span></h2>
-    <p id="lista-vuota" class="film-stato">La lista è vuota: usa il pulsante su una card per aggiungere un film.</p>
-    <ul id="lista-film" class="lista-film"></ul>
-  </section>
+      <div id="notifica" role="status"></div>
+    </main>
 
+    <footer>
+      <!-- Autore, anno -->
+      <p>Matteo Brucculeri · <span id="anno"></span></p>
+      <p class="credits">
+        Dati forniti da TMDB. Questo prodotto usa l'API di TMDB ma non è
+        approvato né certificato da TMDB.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
