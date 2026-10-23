@@ -25,6 +25,7 @@ Una semplice applicazione web che permette di creare e gestire una propria watch
 ## Configurazione di TMDB
 
 La web app usa l'endpoint di ricerca film di TMDB. Per eseguire le ricerche è necessaria una chiave API. 
+
 La mia key "aaa3c73bc331555f7afd5839a1031488" è già inserita nella variabile opportuna per cui dovrebbe funzionare senza necessità di inserire la propria.
 
 **Se l'app non riesce ad accedere a TMDB**
