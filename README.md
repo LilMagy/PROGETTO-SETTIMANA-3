@@ -1,6 +1,6 @@
 # La mia Watchlist
 
-Una semplice applicazione web che permette di creare e gestire una watchlist personale e dinamica di film. Cerca i film tramite [The Movie Database (TMDB)](https://www.themoviedb.org/), componi la tua lista e tieni traccia di ciò che hai già visto.
+Una semplice applicazione web che permette di creare e gestire una propria watchlist dinamica. Cerca i film tramite [The Movie Database (TMDB)](https://www.themoviedb.org/), componi la tua lista e tieni traccia di ciò che hai già visto.
 
 ## Funzionalità
 
